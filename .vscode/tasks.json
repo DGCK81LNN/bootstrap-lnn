@@ -1,0 +1,14 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Sass",
+            "type": "shell",
+            "command": "sass -s compressed ./bootstrap-lnn.scss ./dist/bootstrap-lnn.min.css",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
