@@ -1,29 +1,29 @@
 $font-family-primary:
-    '思源黑体 CN',
-    'Source Han CN',
-    '苹方-简',
-    'PingFang SC',
-    '微软雅黑',
-    'Microsoft YaHei',
-    sans-serif,
-    "Apple Color Emoji",
-    "Segoe UI Emoji",
-    "Segoe UI Symbol",
-    "Noto Color Emoji";
+  '思源黑体 CN',
+  'Source Han CN',
+  '苹方-简',
+  'PingFang SC',
+  '微软雅黑',
+  'Microsoft YaHei',
+  sans-serif,
+  "Apple Color Emoji",
+  "Segoe UI Emoji",
+  "Segoe UI Symbol",
+  "Noto Color Emoji";
 $font-family-secondary:
-    system-ui,
-    -apple-system,
-    "Segoe UI",
-    Roboto,
-    "Helvetica Neue",
-    Arial,
-    "Noto Sans",
-    "Liberation Sans",
-    sans-serif,
-    "Apple Color Emoji",
-    "Segoe UI Emoji",
-    "Segoe UI Symbol",
-    "Noto Color Emoji";
+  -apple-system,
+  "Segoe UI",
+  Roboto,
+  system-ui,
+  "Helvetica Neue",
+  Arial,
+  "Noto Sans",
+  "Liberation Sans",
+  sans-serif,
+  "Apple Color Emoji",
+  "Segoe UI Emoji",
+  "Segoe UI Symbol",
+  "Noto Color Emoji";
 
 @import "./node_modules/bootstrap/scss/functions";
 
@@ -74,10 +74,29 @@ $link-color: $info;
 
 @import "./node_modules/bootstrap/scss/utilities/api";
 
-*[lang$="-Hans"],
-*[lang*="-Hans-"] {
-    --bs-font-sans-serif: #{$font-family-primary};
+@font-face {
+  font-family: LNNCrypt;
+  src: url('https://dgck81lnn.github.io/bootstrap-lnn/fonts/LNNCrypt.woff');
+  unicode-range: U+E000-E03F;
+  font-display: block;
 }
-*[lang]:not([lang$="-Hans"]):not([lang*="-Hans-"]) {
-    --bs-font-sans-serif: #{$font-family-secondary};
+@font-face {
+  font-family: Zhunghua;
+  src: url('https://dgck81lnn.github.io/bootstrap-lnn/fonts/Zhunghua@0.4.woff');
+  
+  font-display: block;
+}
+
+[lang] {
+  font-family: #{$font-family-secondary};
+}
+[lang$="-Hans"],
+[lang*="-Hans-"] {
+  font-family: #{$font-family-primary};
+}
+[lang*="-Qaac"] {
+  font-family: LNNCrypt, #{$font-family-primary};
+}
+[lang*="-Qaaz"] {
+  font-family: Zhunghua, #{$font-family-secondary};
 }
