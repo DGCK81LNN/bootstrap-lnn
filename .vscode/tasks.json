@@ -4,7 +4,7 @@
         {
             "label": "Sass",
             "type": "shell",
-            "command": "sass -s compressed ./bootstrap-lnn.scss ./dist/bootstrap-lnn.min.css",
+            "command": "npx sass -s compressed ./bootstrap-lnn.scss ./dist/bootstrap-lnn.min.css",
             "group": {
                 "kind": "build",
                 "isDefault": true
