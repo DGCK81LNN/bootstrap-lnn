@@ -82,8 +82,7 @@ $link-color: $info;
 }
 @font-face {
   font-family: Zhunghua;
-  src: url('https://dgck81lnn.github.io/bootstrap-lnn/fonts/Zhunghua@0.4.woff');
-  
+  src: url('https://dgck81lnn.github.io/bootstrap-lnn/fonts/Zhunghua@0.5.woff');
   font-display: block;
 }
 
@@ -94,9 +93,11 @@ $link-color: $info;
 [lang*="-Hans-"] {
   font-family: #{$font-family-primary};
 }
-[lang*="-Qaac"] {
+[lang$="-Qaac"],
+[lang*="-Qaac-"] {
   font-family: LNNCrypt, #{$font-family-primary};
 }
-[lang*="-Qaaz"] {
+[lang$="-Qaaz"],
+[lang*="-Qaaz-"] {
   font-family: Zhunghua, #{$font-family-secondary};
 }
