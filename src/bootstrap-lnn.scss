@@ -1,0 +1,30 @@
+@import "./overrides";
+@import "bootstrap/scss/bootstrap.scss";
+
+@font-face {
+  font-family: LNNCrypt;
+  src: url("https://dgck81lnn.github.io/bootstrap-lnn/fonts/LNNCrypt.woff");
+  unicode-range: U+E000-E03F;
+  font-display: block;
+}
+@font-face {
+  font-family: Zhunghua;
+  src: url("https://dgck81lnn.github.io/bootstrap-lnn/fonts/Zhunghua@0.5.woff");
+  font-display: block;
+}
+
+[lang] {
+  font-family: #{$font-family-secondary};
+}
+[lang$="-Hans"],
+[lang*="-Hans-"] {
+  font-family: #{$font-family-primary};
+}
+[lang$="-Qaac"],
+[lang*="-Qaac-"] {
+  font-family: LNNCrypt, #{$font-family-primary};
+}
+[lang$="-Qaaz"],
+[lang*="-Qaaz-"] {
+  font-family: Zhunghua, #{$font-family-secondary};
+}

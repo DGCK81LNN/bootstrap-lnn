@@ -1,0 +1,14 @@
+$font-family-primary: "思源黑体 CN", "Source Han CN", "苹方-简", "PingFang SC",
+  "微软雅黑", "Microsoft YaHei", sans-serif, "Apple Color Emoji",
+  "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$font-family-secondary: -apple-system, "Segoe UI", Roboto, system-ui,
+  "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+$primary: #33bfab;
+$success: #98f01b;
+$info: #30abd9;
+$warning: #ecf73a;
+$danger: #f15;
+$font-family-sans-serif: $font-family-primary;
+$link-color: $info;
