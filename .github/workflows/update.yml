@@ -13,8 +13,8 @@ jobs:
     - name: package-update
       uses: taichi/actions-package-update@master
       env:
-        AUTHOR_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
-        AUTHOR_NAME: github-actions[bot]
+        AUTHOR_EMAIL: actions@github.com
+        AUTHOR_NAME: GitHub Actions
         EXECUTE: "true"
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         LOG_LEVEL: debug
