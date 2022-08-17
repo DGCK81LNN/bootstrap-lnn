@@ -2,8 +2,8 @@
   "private": true,
   "devDependencies": {
     "bootstrap": "^5.2.0",
-    "bootstrap-vue-3": "^0.2.6",
-    "esbuild": "^0.14.54",
+    "bootstrap-vue-3": "^0.2.8",
+    "esbuild": "^0.15.5",
     "sass": "^1.54.4"
   },
   "scripts": {
