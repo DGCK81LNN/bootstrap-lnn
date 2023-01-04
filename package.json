@@ -3,7 +3,7 @@
   "devDependencies": {
     "bootstrap": "^5.2.3",
     "bootstrap-vue-3": "^0.4.11",
-    "esbuild": "^0.15.16",
+    "esbuild": "^0.16.13",
     "sass": "^1.57.1"
   },
   "scripts": {
