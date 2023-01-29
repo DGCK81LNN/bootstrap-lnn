@@ -1,9 +1,10 @@
+$font-family-emoji: "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+  "Noto Color Emoji";
 $font-family-primary: "思源黑体 CN", "Source Han CN", "苹方-简", "PingFang SC",
-  "微软雅黑", "Microsoft YaHei", sans-serif, "Apple Color Emoji",
-  "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  "微软雅黑", "Microsoft YaHei", sans-serif, #{$font-family-emoji};
 $font-family-secondary: -apple-system, "Segoe UI", Roboto, system-ui,
   "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
-  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  #{$font-family-emoji};
 
 $primary: #33bfab;
 $success: #98f01b;

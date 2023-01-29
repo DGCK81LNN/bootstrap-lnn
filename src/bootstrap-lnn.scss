@@ -3,28 +3,45 @@
 
 @font-face {
   font-family: LNNCrypt;
-  src: url("https://dgck81lnn.github.io/bootstrap-lnn/fonts/LNNCrypt.woff");
+  src: url("/bootstrap-lnn/fonts/LNNCrypt.woff") format("woff");
   unicode-range: U+E000-E03F;
   font-display: block;
 }
 @font-face {
   font-family: Zhunghua;
-  src: url("https://dgck81lnn.github.io/bootstrap-lnn/fonts/Zhunghua@0.5.woff");
+  src: url("/bootstrap-lnn/fonts/Zhunghua@0.5.woff2") format("woff2"),
+    url("/bootstrap-lnn/fonts/Zhunghua@0.5.woff") format("woff");
+  font-display: block;
+}
+@font-face {
+  font-family: XEGOEPUAall;
+  src: url("/bootstrap-lnn/fonts/XEGOEPUAall.woff2") format("woff2"),
+    url("/bootstrap-lnn/fonts/XEGOEPUAall.woff") format("woff");
   font-display: block;
 }
 
 [lang] {
-  font-family: #{$font-family-secondary};
+  font-family: var(--bs-font-sans-serif);
+  --bs-font-sans-serif: #{$font-family-secondary};
 }
 [lang$="-Hans"],
 [lang*="-Hans-"] {
-  font-family: #{$font-family-primary};
+  --bs-font-sans-serif: #{$font-family-primary};
 }
 [lang$="-Qaac"],
 [lang*="-Qaac-"] {
-  font-family: LNNCrypt, #{$font-family-primary};
+  --bs-font-sans-serif: LNNCrypt, #{$font-family-primary};
 }
 [lang$="-Qaaz"],
 [lang*="-Qaaz-"] {
-  font-family: Zhunghua, #{$font-family-secondary};
+  --bs-font-sans-serif: Zhunghua, #{$font-family-secondary};
+}
+[lang="art-x-xdi8"],
+[lang="qdx"],
+[lang^="qdx-"],
+[lang$="-Qaax"],
+[lang*="-Qaax-"] {
+  --bs-font-sans-serif: XEGOEPUAall, "Segoe UI", "思源黑体 CN",
+    "Source Han CN", -apple-system, "Roboto", "微软雅黑", "Microsoft YaHei",
+    system-ui, sans-serif, #{$font-family-emoji};
 }
