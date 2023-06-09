@@ -22,26 +22,129 @@
 
 [lang] {
   font-family: var(--bs-font-sans-serif);
-  --bs-font-sans-serif: #{$font-family-secondary};
+}
+.font-serif,
+.font-serif [lang] {
+  font-family: var(--bs-font-serif);
+}
+code[lang],
+code [lang],
+pre[lang],
+pre [lang],
+kbd[lang],
+kbd [lang],
+samp[lang],
+samp [lang],
+tt[lang],
+tt [lang],
+.font-monospace,
+.font-monospace [lang] {
+  font-family: var(--bs-font-monospace);
+}
+[lang],
+.soul-font-g {
+  --bs-font-sans-serif: #{inspect($soul-font-dflt)};
+  --bs-font-serif: #{inspect($soul-font-dflt-serif)};
+  --bs-font-monospace: #{inspect($soul-font-dflt-monospace)};
+  font-synthesis: initial;
+}
+[lang^="zh-"][lang$="-TW"],
+[lang^="zh-"][lang~="-TW-"],
+[lang^="cmn-"][lang$="-TW"],
+[lang^="cmn-"][lang~="-TW-"],
+[lang$="-Hant"],
+[lang*="-Hant-"],
+.soul-font-hant {
+  --bs-font-sans-serif: #{inspect($soul-font-hant)};
+  --bs-font-serif: #{inspect($soul-font-hant-serif)};
+  --bs-font-monospace:
+    'Sarasa Term TC', 'Sarasa Mono TC',
+    'Sarasa Term Slab TC', 'Sarasa Mono Slab TC',
+    'Sarasa Fixed TC', 'Sarasa Fixed Slab TC',
+    'Noto Sans Term CJK TC',
+    'Roboto Term', Menlo, Consolas, 'Liberation Term', 'Fira Code',
+    'Courier New', monospace, #{inspect($soul-font-hant)};
+  font-synthesis: initial;
+}
+[lang^="zh-"][lang$="-HK"],
+[lang^="zh-"][lang~="-HK-"],
+[lang^="cmn-"][lang$="-HK"],
+[lang^="cmn-"][lang~="-HK-"],
+[lang~="-Hant-"][lang$="-HK"],
+[lang~="-Hant-"][lang$="-HK"],
+.soul-font-hant-hk {
+  --bs-font-sans-serif:
+    'Source Han Sans HC', 'Source Han Sans HK',
+    'Noto Sans HC', 'Noto Sans CJK HC',
+    #{inspect($soul-font-hant)};
+  --bs-font-serif:
+    'Source Han Serif HC', 'Source Han Serif HK',
+    'Noto Serif HC', 'Noto Serif CJK HC',
+    #{inspect($soul-font-hant-serif)};
+  --bs-font-monospace:
+    'Sarasa Term HC', 'Sarasa Mono HC',
+    'Sarasa Term Slab HC', 'Sarasa Mono Slab HC',
+    'Sarasa Fixed HC', 'Sarasa Fixed Slab HC',
+    'Noto Sans Term CJK HC',
+    'Roboto Term', Menlo, Consolas, 'Liberation Term', 'Fira Code',
+    'Courier New', monospace, #{inspect($soul-font-hant)};
+  font-synthesis: initial;
+}
+[lang="lzh"],
+[lang^="lzh-"],
+.soul-font-lzh {
+  --bs-font-sans-serif: #{inspect($soul-font-hant)};
+  --bs-font-serif: #{inspect($soul-font-hant-serif)};
+  --bs-font-monospace:
+    'Sarasa Term CL', 'Sarasa Mono CL',
+    'Sarasa Term Slab CL', 'Sarasa Mono Slab CL',
+    'Sarasa Fixed CL', 'Sarasa Fixed Slab CL',
+    'Sarasa Term TC', 'Sarasa Mono TC',
+    'Sarasa Term Slab TC', 'Sarasa Mono Slab TC',
+    'Sarasa Fixed TC', 'Sarasa Fixed Slab TC',
+    'Noto Sans Term CJK TC',
+    'Sarasa Term HC', 'Sarasa Mono HC',
+    'Sarasa Term Slab HC', 'Sarasa Mono Slab HC',
+    'Sarasa Fixed HC', 'Sarasa Fixed Slab HC',
+    'Noto Sans Term CJK HC',
+    'Sarasa Term SC', 'Sarasa Mono SC',
+    'Sarasa Term Slab SC', 'Sarasa Mono Slab SC',
+    'Sarasa Fixed SC', 'Sarasa Fixed Slab SC',
+    'Noto Sans Term CJK SC',
+    'Roboto Term', Menlo, Consolas, 'Liberation Term', 'Fira Code',
+    'Courier New', monospace, #{inspect($soul-font-hant)};
+  font-synthesis: initial;
 }
 [lang$="-Hans"],
-[lang*="-Hans-"] {
-  --bs-font-sans-serif: #{$font-family-primary};
+[lang*="-Hans-"],
+[lang="zh-CN"],
+[lang^="zh-CN-"],
+.soul-font-hans {
+  --bs-font-sans-serif: #{inspect($soul-font-hans)};
+  --bs-font-serif: #{inspect($soul-font-dflt-serif)};
+  --bs-font-monospace: #{inspect($soul-font-dflt-monospace)};
+  font-synthesis: initial;
 }
 [lang$="-Qaac"],
-[lang*="-Qaac-"] {
-  --bs-font-sans-serif: LNNCrypt, #{$font-family-primary};
+[lang*="-Qaac-"],
+.soul-font-qaac {
+  --bs-font-sans-serif: "LNNCrypt", #{inspect($soul-font-hans)};
+  font-synthesis: none;
 }
 [lang$="-Qaaz"],
-[lang*="-Qaaz-"] {
-  --bs-font-sans-serif: Zhunghua, #{$font-family-secondary};
+[lang*="-Qaaz-"],
+.soul-font-qaaz {
+  --bs-font-sans-serif: "Zhunghua", #{inspect($soul-font-dflt)};
+  font-synthesis: none;
 }
-[lang="art-x-xdi8"],
+[lang$="-Qaax"],
+[lang*="-Qaax-"],
 [lang="qdx"],
 [lang^="qdx-"],
-[lang$="-Qaax"],
-[lang*="-Qaax-"] {
-  --bs-font-sans-serif: XEGOEPUAall, "Segoe UI", "思源黑体 CN",
-    "Source Han CN", -apple-system, "Roboto", "微软雅黑", "Microsoft YaHei",
-    system-ui, sans-serif, #{$font-family-emoji};
+[lang="art-x-xdi8"],
+.soul-font-qaax {
+  --bs-font-sans-serif: "XEGOEPUAall", "Segoe UI", "思源黑体 CN", -apple-system,
+    "Roboto", "Microsoft YaHei UI", "微软雅黑", system-ui, sans-serif,
+    #{inspect($soul-font-emoji)};
+  font-synthesis: weight;
 }
