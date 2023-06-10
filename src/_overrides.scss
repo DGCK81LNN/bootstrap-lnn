@@ -10,8 +10,10 @@ $soul-font-hans:
   'Microsoft YaHei', 'Droid Sans Fallback', sans-serif,
   #{inspect($soul-font-emoji)};
 $soul-font-dflt-serif:
-  'Roboto Serif', STSong, NSimSun, SimSun, 'Linux Libertine', Georgia,
-  Times, 'Source Serif Pro', serif, #{inspect($soul-font-emoji)};
+  'Roboto Serif', 'Linux Libertine', Georgia, Times,
+  'Source Serif Pro', 'Source Han Serif SC', 'Source Han Serif CN',
+  'Noto Serif SC', 'Noto Serif CJK SC',
+  STSong, NSimSun, SimSun, serif, #{inspect($soul-font-emoji)};
 $soul-font-hant:
   'Source Han Sans TC', 'Source Han Sans TW',
   'Noto Sans TC', 'Noto Sans CJK TC',
