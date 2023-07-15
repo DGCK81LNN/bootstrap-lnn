@@ -5,9 +5,9 @@ $soul-font-dflt:
   "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
   #{inspect($soul-font-emoji)};
 $soul-font-hans:
-  'Source Han Sans SC', 'Source Han Sans CN', 'PingFang SC', 'DengXian',
-  'Microsoft YaHei UI', 'Noto Sans SC', 'Noto Sans CJK SC',
-  'Microsoft YaHei', 'Droid Sans Fallback', sans-serif,
+  'Source Han Sans SC', 'Source Han Sans CN', 'PingFang SC',
+  'Microsoft YaHei UI', 'Microsoft YaHei', 'DengXian', 'Noto Sans SC',
+  'Noto Sans CJK SC', 'Droid Sans Fallback', sans-serif,
   #{inspect($soul-font-emoji)};
 $soul-font-dflt-serif:
   'Roboto Serif', 'Linux Libertine', Georgia, Times,
