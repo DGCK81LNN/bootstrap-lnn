@@ -4,7 +4,7 @@
     "bootstrap": "5.3.1",
     "bootstrap-vue-next": "^0.11.0",
     "esbuild": "^0.18.17",
-    "sass": "^1.64.2"
+    "sass": "^1.66.1"
   },
   "scripts": {
     "build-css": "sass -s compressed -I node_modules/ src/bootstrap-lnn.scss:dist/bootstrap-lnn.min.css src/bootstrap-vue-3-lnn.scss:dist/bootstrap-vue-3-lnn.min.css",
