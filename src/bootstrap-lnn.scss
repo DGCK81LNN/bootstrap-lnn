@@ -19,6 +19,12 @@
     url("/bootstrap-lnn/fonts/XEGOEPUAall.woff") format("woff");
   font-display: block;
 }
+@font-face {
+  font-family: "Fairfax HD XdPUA";
+  src: url("/bootstrap-lnn/fonts/FairfaxHDXdPUA.woff2") format("woff2"),
+    url("/bootstrap-lnn/fonts/FairfaxHDXdPUA.woff") format("woff");
+  font-display: block;
+}
 
 [lang] {
   font-family: var(--bs-font-sans-serif);
@@ -129,12 +135,16 @@ tt [lang],
 [lang*="-Qaac-"],
 .soul-font-qaac {
   --bs-font-sans-serif: "LNNCrypt", #{inspect($soul-font-hans)};
+  --bs-font-serif: "LNNCrypt", #{inspect($soul-font-dflt-serif)};
+  --bs-font-monospace: "LNNCrypt", #{inspect($soul-font-dflt-monospace)};
   font-synthesis: none;
 }
 [lang$="-Qaaz"],
 [lang*="-Qaaz-"],
 .soul-font-qaaz {
   --bs-font-sans-serif: "Zhunghua", #{inspect($soul-font-dflt)};
+  --bs-font-serif: "Zhunghua", #{inspect($soul-font-dflt-serif)};
+  --bs-font-monospace: "Zhunghua", #{inspect($soul-font-dflt-monospace)};
   font-synthesis: none;
 }
 [lang$="-Qaax"],
@@ -146,5 +156,10 @@ tt [lang],
   --bs-font-sans-serif: "XEGOEPUAall", "Segoe UI", "思源黑体 CN", -apple-system,
     "Roboto", "Microsoft YaHei UI", "微软雅黑", system-ui, sans-serif,
     #{inspect($soul-font-emoji)};
+  // TODO: add serif shidinn font
+  --bs-font-serif: "Fairfax HD XdPUA", #{inspect($soul-font-dflt-serif)};
+  --bs-font-monospace: "Fairfax HD XdPUA", 'Roboto Mono', Menlo, Consolas,
+    'Liberation Mono', 'Fira Code', 'Courier New', monospace,
+    #{inspect($soul-font-hans)};
   font-synthesis: weight;
 }
