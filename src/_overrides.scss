@@ -10,7 +10,7 @@ $soul-font-hans:
   'Noto Sans CJK SC', 'Droid Sans Fallback', sans-serif,
   #{inspect($soul-font-emoji)};
 $soul-font-dflt-serif:
-  'Roboto Serif', 'Linux Libertine', Georgia, Times,
+  'Noto Serif', 'Roboto Serif', 'Linux Libertine', Georgia, Times,
   'Source Serif Pro', 'Source Han Serif SC', 'Source Han Serif CN',
   'Noto Serif SC', 'Noto Serif CJK SC',
   STSong, NSimSun, SimSun, serif, #{inspect($soul-font-emoji)};
@@ -19,14 +19,16 @@ $soul-font-hant:
   'Noto Sans TC', 'Noto Sans CJK TC',
   'Source Han Sans HC', 'Source Han Sans HK',
   'Noto Sans HC', 'Noto Sans CJK HC',
-  'PingFang TC', 'LiHei Pro',
-  'Microsoft JhengHei UI', 'Microsoft JhengHei', sans-serif;
+  'PingFang TC', 'LiHei Pro', 'PingFang HK',
+  'Microsoft JhengHei UI', 'Microsoft JhengHei'
+  , sans-serif, #{inspect($soul-font-emoji)};
 $soul-font-hant-serif:
-  'Source Han Serif TC', 'Source Han Serif TW',
+  'Noto Serif', 'Roboto Serif', 'Linux Libertine', Georgia, Times,
+  'Source Serif Pro', 'Source Han Serif TC', 'Source Han Serif TW',
   'Noto Serif TC', 'Noto Serif CJK TC',
   'Source Han Serif HC', 'Source Han Serif HK',
   'Noto Serif HC', 'Noto Serif CJK HC',
-  PMingLiU, MingLiU, serif;
+  PMingLiU, MingLiU, serif, #{inspect($soul-font-emoji)};
 $soul-font-dflt-monospace:
   'Sarasa Term SC', 'Sarasa Mono SC',
   'Sarasa Term Slab SC', 'Sarasa Mono Slab SC',

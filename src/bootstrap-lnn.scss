@@ -154,12 +154,9 @@ tt [lang],
 [lang="art-x-xdi8"],
 .soul-font-qaax {
   --bs-font-sans-serif: "XEGOEPUAall", "Segoe UI", "思源黑体 CN", -apple-system,
-    "Roboto", "Microsoft YaHei UI", "微软雅黑", system-ui, sans-serif,
-    #{inspect($soul-font-emoji)};
+    "Roboto", #{inspect($soul-font-hans)};
   // TODO: add serif shidinn font
   --bs-font-serif: "Fairfax HD XdPUA", #{inspect($soul-font-dflt-serif)};
-  --bs-font-monospace: "Fairfax HD XdPUA", 'Roboto Mono', Menlo, Consolas,
-    'Liberation Mono', 'Fira Code', 'Courier New', monospace,
-    #{inspect($soul-font-hans)};
+  --bs-font-monospace: "Fairfax HD XdPUA", #{inspect($soul-font-dflt-monospace)};
   font-synthesis: weight;
 }
