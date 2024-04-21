@@ -69,7 +69,7 @@ tt [lang],
     'Sarasa Fixed TC', 'Sarasa Fixed Slab TC',
     'Noto Sans Term CJK TC',
     'Roboto Term', Menlo, Consolas, 'Liberation Term', 'Fira Code',
-    'Courier New', monospace, #{inspect($soul-font-hant)};
+    'Courier New', #{inspect($soul-font-hant)}, monospace;
   font-synthesis: initial;
 }
 [lang^="zh-"][lang$="-HK"],
@@ -93,7 +93,7 @@ tt [lang],
     'Sarasa Fixed HC', 'Sarasa Fixed Slab HC',
     'Noto Sans Term CJK HC',
     'Roboto Term', Menlo, Consolas, 'Liberation Term', 'Fira Code',
-    'Courier New', monospace, #{inspect($soul-font-hant)};
+    'Courier New', #{inspect($soul-font-hant)}, monospace;
   font-synthesis: initial;
 }
 [lang="lzh"],
@@ -118,7 +118,7 @@ tt [lang],
     'Sarasa Fixed SC', 'Sarasa Fixed Slab SC',
     'Noto Sans Term CJK SC',
     'Roboto Term', Menlo, Consolas, 'Liberation Term', 'Fira Code',
-    'Courier New', monospace, #{inspect($soul-font-hant)};
+    'Courier New', #{inspect($soul-font-hant)}, monospace;
   font-synthesis: initial;
 }
 [lang$="-Hans"],
