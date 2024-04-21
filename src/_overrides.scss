@@ -1,41 +1,41 @@
 $soul-font-emoji: "Apple Color Emoji", "Segoe UI Emoji",
   "Segoe UI Symbol", "Noto Color Emoji";
 $soul-font-dflt:
-  -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, Roboto,
+  -apple-system, "BlinkMacSystemFont", "Segoe UI", system-ui, "Roboto",
   "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
   #{inspect($soul-font-emoji)};
 $soul-font-hans:
-  'Source Han Sans SC', 'Source Han Sans CN', 'PingFang SC',
-  'Microsoft YaHei UI', 'Microsoft YaHei', 'DengXian', 'Noto Sans SC',
-  'Noto Sans CJK SC', 'Droid Sans Fallback', sans-serif,
+  "Source Han Sans SC", "Source Han Sans CN", "PingFang SC",
+  "Microsoft YaHei UI", "Microsoft YaHei", "微软雅黑", "DengXian", "等线",
+  "Noto Sans SC", "Noto Sans CJK SC", "Droid Sans Fallback", sans-serif,
   #{inspect($soul-font-emoji)};
 $soul-font-dflt-serif:
-  'Noto Serif', 'Roboto Serif', 'Linux Libertine', Georgia, Times,
-  'Source Serif Pro', 'Source Han Serif SC', 'Source Han Serif CN',
-  'Noto Serif SC', 'Noto Serif CJK SC',
-  STSong, NSimSun, SimSun, serif, #{inspect($soul-font-emoji)};
+  "Noto Serif", "Roboto Serif", "Linux Libertine", Georgia, Times,
+  "Source Serif Pro", "Source Han Serif SC", "Source Han Serif CN",
+  "Noto Serif SC", "Noto Serif CJK SC",
+  "STSong", "NSimSun", "SimSun", serif, #{inspect($soul-font-emoji)};
 $soul-font-hant:
-  'Source Han Sans TC', 'Source Han Sans TW',
-  'Noto Sans TC', 'Noto Sans CJK TC',
-  'Source Han Sans HC', 'Source Han Sans HK',
-  'Noto Sans HC', 'Noto Sans CJK HC',
-  'PingFang TC', 'LiHei Pro', 'PingFang HK',
-  'Microsoft JhengHei UI', 'Microsoft JhengHei'
-  , sans-serif, #{inspect($soul-font-emoji)};
+  "Source Han Sans TC", "Source Han Sans TW",
+  "Noto Sans TC", "Noto Sans CJK TC",
+  "Source Han Sans HC", "Source Han Sans HK",
+  "Noto Sans HC", "Noto Sans CJK HC",
+  "PingFang TC", "LiHei Pro", "PingFang HK",
+  "Microsoft JhengHei UI", "Microsoft JhengHei", "微軟正黑體",
+  sans-serif, #{inspect($soul-font-emoji)};
 $soul-font-hant-serif:
-  'Noto Serif', 'Roboto Serif', 'Linux Libertine', Georgia, Times,
-  'Source Serif Pro', 'Source Han Serif TC', 'Source Han Serif TW',
-  'Noto Serif TC', 'Noto Serif CJK TC',
-  'Source Han Serif HC', 'Source Han Serif HK',
-  'Noto Serif HC', 'Noto Serif CJK HC',
-  PMingLiU, MingLiU, serif, #{inspect($soul-font-emoji)};
+  "Noto Serif", "Roboto Serif", "Linux Libertine", Georgia, Times,
+  "Source Serif Pro", "Source Han Serif TC", "Source Han Serif TW",
+  "Noto Serif TC", "Noto Serif CJK TC",
+  "Source Han Serif HC", "Source Han Serif HK",
+  "Noto Serif HC", "Noto Serif CJK HC",
+  "PMingLiU", "MingLiU", serif, #{inspect($soul-font-emoji)};
 $soul-font-dflt-monospace:
-  'Sarasa Term SC', 'Sarasa Mono SC',
-  'Sarasa Term Slab SC', 'Sarasa Mono Slab SC',
-  'Sarasa Fixed SC', 'Sarasa Fixed Slab SC',
-  'Noto Sans Mono CJK SC',
-  'Roboto Mono', Menlo, Consolas, 'Liberation Mono', 'Fira Code',
-  'Courier New', monospace, #{inspect($soul-font-hans)};
+  "Sarasa Term SC", "Sarasa Mono SC",
+  "Sarasa Term Slab SC", "Sarasa Mono Slab SC",
+  "Sarasa Fixed SC", "Sarasa Fixed Slab SC",
+  "Noto Sans Mono CJK SC",
+  "Roboto Mono", "Menlo", "Consolas", "Liberation Mono", "Fira Code",
+  "Courier New", monospace, #{inspect($soul-font-hans)};
 
 $primary: #33bfab;
 $success: #98f01b;

@@ -2,19 +2,19 @@
 @import "bootstrap/scss/bootstrap.scss";
 
 @font-face {
-  font-family: LNNCrypt;
+  font-family: "LNNCrypt";
   src: url("/bootstrap-lnn/fonts/LNNCrypt.woff") format("woff");
   unicode-range: U+E000-E03F;
   font-display: block;
 }
 @font-face {
-  font-family: Zhunghua;
+  font-family: "Zhunghua";
   src: url("/bootstrap-lnn/fonts/Zhunghua@0.5.woff2") format("woff2"),
     url("/bootstrap-lnn/fonts/Zhunghua@0.5.woff") format("woff");
   font-display: block;
 }
 @font-face {
-  font-family: XEGOEPUAall;
+  font-family: "XEGOEPUAall";
   src: url("/bootstrap-lnn/fonts/XEGOEPUAall.woff2") format("woff2"),
     url("/bootstrap-lnn/fonts/XEGOEPUAall.woff") format("woff");
   font-display: block;
@@ -64,12 +64,12 @@ tt [lang],
   --bs-font-sans-serif: #{inspect($soul-font-hant)};
   --bs-font-serif: #{inspect($soul-font-hant-serif)};
   --bs-font-monospace:
-    'Sarasa Term TC', 'Sarasa Mono TC',
-    'Sarasa Term Slab TC', 'Sarasa Mono Slab TC',
-    'Sarasa Fixed TC', 'Sarasa Fixed Slab TC',
-    'Noto Sans Term CJK TC',
-    'Roboto Term', Menlo, Consolas, 'Liberation Term', 'Fira Code',
-    'Courier New', #{inspect($soul-font-hant)}, monospace;
+    "Sarasa Term TC", "Sarasa Mono TC",
+    "Sarasa Term Slab TC", "Sarasa Mono Slab TC",
+    "Sarasa Fixed TC", "Sarasa Fixed Slab TC",
+    "Noto Sans Term CJK TC",
+    "Roboto Term", "Menlo", "Consolas", "Liberation Term", "Fira Code",
+    "Courier New", #{inspect($soul-font-hant)}, monospace;
   font-synthesis: initial;
 }
 [lang^="zh-"][lang$="-HK"],
@@ -80,20 +80,20 @@ tt [lang],
 [lang~="-Hant-"][lang$="-HK"],
 .soul-font-hant-hk {
   --bs-font-sans-serif:
-    'Source Han Sans HC', 'Source Han Sans HK',
-    'Noto Sans HC', 'Noto Sans CJK HC',
+    "Source Han Sans HC", "Source Han Sans HK",
+    "Noto Sans HC", "Noto Sans CJK HC",
     #{inspect($soul-font-hant)};
   --bs-font-serif:
-    'Source Han Serif HC', 'Source Han Serif HK',
-    'Noto Serif HC', 'Noto Serif CJK HC',
+    "Source Han Serif HC", "Source Han Serif HK",
+    "Noto Serif HC", "Noto Serif CJK HC",
     #{inspect($soul-font-hant-serif)};
   --bs-font-monospace:
-    'Sarasa Term HC', 'Sarasa Mono HC',
-    'Sarasa Term Slab HC', 'Sarasa Mono Slab HC',
-    'Sarasa Fixed HC', 'Sarasa Fixed Slab HC',
-    'Noto Sans Term CJK HC',
-    'Roboto Term', Menlo, Consolas, 'Liberation Term', 'Fira Code',
-    'Courier New', #{inspect($soul-font-hant)}, monospace;
+    "Sarasa Term HC", "Sarasa Mono HC",
+    "Sarasa Term Slab HC", "Sarasa Mono Slab HC",
+    "Sarasa Fixed HC", "Sarasa Fixed Slab HC",
+    "Noto Sans Term CJK HC",
+    "Roboto Term", "Menlo", "Consolas", "Liberation Term", "Fira Code",
+    "Courier New", #{inspect($soul-font-hant)}, monospace;
   font-synthesis: initial;
 }
 [lang="lzh"],
@@ -102,23 +102,23 @@ tt [lang],
   --bs-font-sans-serif: #{inspect($soul-font-hant)};
   --bs-font-serif: #{inspect($soul-font-hant-serif)};
   --bs-font-monospace:
-    'Sarasa Term CL', 'Sarasa Mono CL',
-    'Sarasa Term Slab CL', 'Sarasa Mono Slab CL',
-    'Sarasa Fixed CL', 'Sarasa Fixed Slab CL',
-    'Sarasa Term TC', 'Sarasa Mono TC',
-    'Sarasa Term Slab TC', 'Sarasa Mono Slab TC',
-    'Sarasa Fixed TC', 'Sarasa Fixed Slab TC',
-    'Noto Sans Term CJK TC',
-    'Sarasa Term HC', 'Sarasa Mono HC',
-    'Sarasa Term Slab HC', 'Sarasa Mono Slab HC',
-    'Sarasa Fixed HC', 'Sarasa Fixed Slab HC',
-    'Noto Sans Term CJK HC',
-    'Sarasa Term SC', 'Sarasa Mono SC',
-    'Sarasa Term Slab SC', 'Sarasa Mono Slab SC',
-    'Sarasa Fixed SC', 'Sarasa Fixed Slab SC',
-    'Noto Sans Term CJK SC',
-    'Roboto Term', Menlo, Consolas, 'Liberation Term', 'Fira Code',
-    'Courier New', #{inspect($soul-font-hant)}, monospace;
+    "Sarasa Term CL", "Sarasa Mono CL",
+    "Sarasa Term Slab CL", "Sarasa Mono Slab CL",
+    "Sarasa Fixed CL", "Sarasa Fixed Slab CL",
+    "Sarasa Term TC", "Sarasa Mono TC",
+    "Sarasa Term Slab TC", "Sarasa Mono Slab TC",
+    "Sarasa Fixed TC", "Sarasa Fixed Slab TC",
+    "Noto Sans Term CJK TC",
+    "Sarasa Term HC", "Sarasa Mono HC",
+    "Sarasa Term Slab HC", "Sarasa Mono Slab HC",
+    "Sarasa Fixed HC", "Sarasa Fixed Slab HC",
+    "Noto Sans Term CJK HC",
+    "Sarasa Term SC", "Sarasa Mono SC",
+    "Sarasa Term Slab SC", "Sarasa Mono Slab SC",
+    "Sarasa Fixed SC", "Sarasa Fixed Slab SC",
+    "Noto Sans Term CJK SC",
+    "Roboto Term", "Menlo", "Consolas", "Liberation Term", "Fira Code",
+    "Courier New", #{inspect($soul-font-hant)}, monospace;
   font-synthesis: initial;
 }
 [lang$="-Hans"],
