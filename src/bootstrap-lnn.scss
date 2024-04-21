@@ -1,66 +1,52 @@
+@import "./functions";
 @import "./overrides";
 @import "bootstrap/scss/bootstrap.scss";
 
-@font-face {
-  font-family: "LNNCrypt";
-  src: url("/bootstrap-lnn/fonts/LNNCrypt.woff") format("woff");
-  unicode-range: U+E000-E03F;
-  font-display: block;
-}
-@font-face {
-  font-family: "Zhunghua";
-  src: url("/bootstrap-lnn/fonts/Zhunghua@0.5.woff2") format("woff2"),
-    url("/bootstrap-lnn/fonts/Zhunghua@0.5.woff") format("woff");
-  font-display: block;
-}
-@font-face {
-  font-family: "XEGOEPUAall";
-  src: url("/bootstrap-lnn/fonts/XEGOEPUAall.woff2") format("woff2"),
-    url("/bootstrap-lnn/fonts/XEGOEPUAall.woff") format("woff");
-  font-display: block;
-}
-@font-face {
-  font-family: "Fairfax HD XdPUA";
-  src: url("/bootstrap-lnn/fonts/FairfaxHDXdPUA.woff2") format("woff2"),
-    url("/bootstrap-lnn/fonts/FairfaxHDXdPUA.woff") format("woff");
-  font-display: block;
+@each $family-name, $file-name, $unicode-range in (
+  "LNNCrypt"         "LNNCrypt"      (U+E000-E03C),
+  "Zhunghua"         "Zhunghua@0.5",
+  "XEGOEPUAall"      "XEGOEPUAall",
+  "Fairfax HD XdPUA" "FairfaxHDXdPUA",
+) {
+  @font-face {
+    font-family: $family-name;
+    src: url("/bootstrap-lnn/fonts/#{$file-name}.woff2") format("woff2"),
+      url("/bootstrap-lnn/fonts/#{$file-name}.woff") format("woff");
+    unicode-range: $unicode-range;
+    font-display: block;
+  }
 }
 
 [lang] {
   font-family: var(--bs-font-sans-serif);
 }
-.font-serif,
-.font-serif [lang] {
-  font-family: var(--bs-font-serif);
+code, pre, kbd, samp, tt {
+  &[lang], & [lang] {
+    font-family: var(--bs-font-monospace);
+  }
 }
-code[lang],
-code [lang],
-pre[lang],
-pre [lang],
-kbd[lang],
-kbd [lang],
-samp[lang],
-samp [lang],
-tt[lang],
-tt [lang],
-.font-monospace,
-.font-monospace [lang] {
-  font-family: var(--bs-font-monospace);
+
+.font-serif {
+  &, & [lang] {
+    font-family: var(--bs-font-serif) !important;
+  }
 }
+.font-monospace {
+  &, & [lang] {
+    font-family: var(--bs-font-monospace) !important;
+  }
+}
+
 [lang],
-.soul-font-g {
+.soul-font-g.soul-font-g {
   --bs-font-sans-serif: #{inspect($soul-font-dflt)};
   --bs-font-serif: #{inspect($soul-font-dflt-serif)};
   --bs-font-monospace: #{inspect($soul-font-dflt-monospace)};
   font-synthesis: initial;
 }
-[lang^="zh-"][lang$="-TW"],
-[lang^="zh-"][lang~="-TW-"],
-[lang^="cmn-"][lang$="-TW"],
-[lang^="cmn-"][lang~="-TW-"],
-[lang$="-Hant"],
-[lang*="-Hant-"],
-.soul-font-hant {
+#{selector-unify(lang-starts-with(zh, cmn), lang-contains-or-ends-with(TW))},
+#{lang-contains-or-ends-with(Hant)},
+.soul-font-hant.soul-font-hant {
   --bs-font-sans-serif: #{inspect($soul-font-hant)};
   --bs-font-serif: #{inspect($soul-font-hant-serif)};
   --bs-font-monospace:
@@ -72,13 +58,11 @@ tt [lang],
     "Courier New", #{inspect($soul-font-hant)}, monospace;
   font-synthesis: initial;
 }
-[lang^="zh-"][lang$="-HK"],
-[lang^="zh-"][lang~="-HK-"],
-[lang^="cmn-"][lang$="-HK"],
-[lang^="cmn-"][lang~="-HK-"],
-[lang~="-Hant-"][lang$="-HK"],
-[lang~="-Hant-"][lang$="-HK"],
-.soul-font-hant-hk {
+#{selector-unify(
+  append(lang-starts-with(zh, cmn), '[lang*="-Hant-"]'),
+  lang-contains-or-ends-with(HK)
+)},
+.soul-font-hant-hk.soul-font-hant-hk {
   --bs-font-sans-serif:
     "Source Han Sans HC", "Source Han Sans HK",
     "Noto Sans HC", "Noto Sans CJK HC",
@@ -96,9 +80,8 @@ tt [lang],
     "Courier New", #{inspect($soul-font-hant)}, monospace;
   font-synthesis: initial;
 }
-[lang="lzh"],
-[lang^="lzh-"],
-.soul-font-lzh {
+#{lang-equals-or-starts-with(lzh)},
+.soul-font-lzh.soul-font-lzh {
   --bs-font-sans-serif: #{inspect($soul-font-hant)};
   --bs-font-serif: #{inspect($soul-font-hant-serif)};
   --bs-font-monospace:
@@ -121,38 +104,32 @@ tt [lang],
     "Courier New", #{inspect($soul-font-hant)}, monospace;
   font-synthesis: initial;
 }
-[lang$="-Hans"],
-[lang*="-Hans-"],
-[lang="zh-CN"],
-[lang^="zh-CN-"],
-.soul-font-hans {
+#{lang-contains-or-ends-with(Hans)},
+#{lang-equals-or-starts-with(zh-CN)},
+.soul-font-hans.soul-font-hans {
   --bs-font-sans-serif: #{inspect($soul-font-hans)};
   --bs-font-serif: #{inspect($soul-font-dflt-serif)};
   --bs-font-monospace: #{inspect($soul-font-dflt-monospace)};
   font-synthesis: initial;
 }
-[lang$="-Qaac"],
-[lang*="-Qaac-"],
-.soul-font-qaac {
+#{lang-contains-or-ends-with(Qaac)},
+.soul-font-qaac.soul-font-qaac {
   --bs-font-sans-serif: "LNNCrypt", #{inspect($soul-font-hans)};
   --bs-font-serif: "LNNCrypt", #{inspect($soul-font-dflt-serif)};
   --bs-font-monospace: "LNNCrypt", #{inspect($soul-font-dflt-monospace)};
   font-synthesis: none;
 }
-[lang$="-Qaaz"],
-[lang*="-Qaaz-"],
-.soul-font-qaaz {
+#{lang-contains-or-ends-with(Qaaz)},
+.soul-font-qaaz.soul-font-qaaz {
   --bs-font-sans-serif: "Zhunghua", #{inspect($soul-font-dflt)};
   --bs-font-serif: "Zhunghua", #{inspect($soul-font-dflt-serif)};
   --bs-font-monospace: "Zhunghua", #{inspect($soul-font-dflt-monospace)};
   font-synthesis: none;
 }
-[lang$="-Qaax"],
-[lang*="-Qaax-"],
-[lang="qdx"],
-[lang^="qdx-"],
+#{lang-contains-or-ends-with(Qaax)},
+#{lang-equals-or-starts-with(qdx)},
 [lang="art-x-xdi8"],
-.soul-font-qaax {
+.soul-font-qaax.soul-font-qaax {
   --bs-font-sans-serif: "XEGOEPUAall", "Segoe UI", "思源黑体 CN", -apple-system,
     "Roboto", #{inspect($soul-font-hans)};
   // TODO: add serif shidinn font

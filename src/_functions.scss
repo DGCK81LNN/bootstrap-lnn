@@ -1,0 +1,36 @@
+@forward "sass:selector" show selector-unify;
+@use "sass:selector";
+
+// Work around Chrome's lack of support for :lang() wildcards
+
+@function lang-equals-or-starts-with($strings...) {
+  $selectors: ();
+  @each $string in $strings {
+    $selectors: join(
+      $selectors,
+      (unquote("[lang=#{$string}]"), unquote("[lang^=#{$string}-]")),
+      "comma"
+    );
+  }
+  @return $selectors;
+}
+
+@function lang-starts-with($strings...) {
+  $selectors: ();
+  @each $string in $strings {
+    $selectors: append($selectors, unquote("[lang^=#{$string}-]"), "comma");
+  }
+  @return $selectors;
+}
+
+@function lang-contains-or-ends-with($strings...) {
+  $selectors: ();
+  @each $string in $strings {
+    $selectors: join(
+      $selectors,
+      (unquote("[lang*=-#{$string}-]"), unquote("[lang$=-#{$string}]")),
+      "comma"
+    );
+  }
+  @return $selectors;
+}
