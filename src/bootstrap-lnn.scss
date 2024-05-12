@@ -17,7 +17,15 @@
   }
 }
 
-[lang] {
+[lang],
+.soul-font-g,
+.soul-font-hans,
+.soul-font-hant-hk,
+.soul-font-hant,
+.soul-font-lzh,
+.soul-font-qaac,
+.soul-font-qaax,
+.soul-font-qaaz {
   font-family: var(--bs-font-sans-serif);
 }
 code, pre, kbd, samp, tt {
