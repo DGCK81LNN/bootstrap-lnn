@@ -3,7 +3,7 @@
   "devDependencies": {
     "@popperjs/core": "^2.11.8",
     "bootstrap": "^5.3.8",
-    "bootstrap-vue-next": "^0.45.5",
+    "bootstrap-vue-next": "^0.45.6",
     "esbuild": "^0.28.1",
     "sass": "^1.101.0"
   },
