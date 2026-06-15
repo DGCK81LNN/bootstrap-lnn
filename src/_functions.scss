@@ -1,5 +1,6 @@
 @forward "sass:selector" show selector-unify;
 @use "sass:selector";
+@import "bootstrap/scss/_functions.scss";
 
 // Work around Chrome's lack of support for :lang() wildcards
 
