@@ -1,3 +1,4 @@
+@import "bootstrap/scss/_functions.scss";
 @import "./functions";
 @import "./overrides";
 @import "bootstrap/scss/bootstrap.scss";
@@ -135,7 +136,7 @@ code, pre, kbd, samp, tt {
   font-synthesis: none;
 }
 #{lang-contains-or-ends-with(Qaax)},
-#{lang-equals-or-starts-with(qdx)},
+#{lang-equals-or-starts-with(qdx, qsd)},
 [lang="art-x-xdi8"],
 .soul-font-qaax.soul-font-qaax {
   --bs-font-sans-serif: "XEGOEPUAall", "Segoe UI", "思源黑体 CN", -apple-system,
@@ -143,5 +144,5 @@ code, pre, kbd, samp, tt {
   // TODO: add serif shidinn font
   --bs-font-serif: "Fairfax HD XdPUA", #{inspect($soul-font-dflt-serif)};
   --bs-font-monospace: "Fairfax HD XdPUA", #{inspect($soul-font-dflt-monospace)};
-  font-synthesis: weight;
+  font-synthesis: initial;
 }

@@ -48,5 +48,6 @@ $info: #30abd9;
 $warning: #ecf73a;
 $danger: #f15;
 $link-color: $info;
+$link-color-dark: tint-color($info, 40%);
 $font-family-sans-serif: null;
 $font-family-monospace: null;
