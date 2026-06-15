@@ -1,15 +1,16 @@
 {
   "private": true,
   "devDependencies": {
-    "bootstrap": "^5.3.3",
-    "bootstrap-vue-next": "^0.17.6",
-    "esbuild": "^0.21.1",
-    "sass": "^1.77.1"
+    "@popperjs/core": "^2.11.8",
+    "bootstrap": "^5.3.8",
+    "bootstrap-vue-next": "^0.45.5",
+    "esbuild": "^0.28.1",
+    "sass": "^1.101.0"
   },
   "scripts": {
     "build-css": "sass -s compressed -I node_modules/ src/bootstrap-lnn.scss:dist/bootstrap-lnn.min.css src/bootstrap-vue-3-lnn.scss:dist/bootstrap-vue-3-lnn.min.css",
     "build-js": "node build_js.js",
     "copy-js": "cp node_modules/bootstrap/dist/js/bootstrap.bundle.min.js* dist/",
-    "build": "npm run build-css && npm run build-js && npm run copy-js"
+    "build": "npm run build-css && npm run copy-js"
   }
 }

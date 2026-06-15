@@ -1,2 +1,2 @@
-import BootstrapVue3 from "bootstrap-vue-next"
-window.BootstrapVue3 = BootstrapVue3
+import { createBootstrap } from "bootstrap-vue-next"
+window.BootstrapVue3 = createBootstrap()
